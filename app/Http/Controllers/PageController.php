@@ -7,16 +7,20 @@ class PageController extends Controller
 {
     public function welcome()
     {
-        $tasks = Task::whereDate(
-            'task_date',
-            now()->toDateString()
-        )->get();
+        $tasks = Task::where('is_archived', false)
+            ->whereDate(
+                'task_date',
+                now()->toDateString()
+            )
+            ->get();
 
         return view('welcome', compact('tasks'));
     }
     public function tasks()
     {
-        $tasks = Task::orderBy('task_date')->get();
+        $tasks = Task::where('is_archived', false)
+            ->orderBy('task_date')
+            ->get();
         return view('tasks', compact('tasks'));
     }
     public function profile()

@@ -1,4 +1,10 @@
 <?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
-class Task extends Model { protected $fillable=['title','status','task_date']; }
+class Task extends Model { protected $fillable = [
+    'title',
+    'description',
+    'status',
+    'task_date',
+    'is_archived'
+]; }
