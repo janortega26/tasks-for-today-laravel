@@ -224,12 +224,6 @@ Managed through Laravel Breeze authentication.
 
 ---
 
-## Developer
-
-Jullie Ann Galit
-
----
-
 ## Course Information
 
 **Course:** IT0049 – Web System Technologies
